@@ -58,3 +58,20 @@ scrollTop.addEventListener("click",()=>{
         top:0
     })
 })
+
+
+
+
+
+
+// Mobile View Team Section
+
+let m_persons=document.querySelectorAll(".m-person-img");
+let m_persons_content=document.querySelectorAll(".m-person-content");
+
+m_persons.forEach((element,index)=>{
+    element.addEventListener("click",()=>{
+        m_persons_content[index].style.display="block";
+    })
+})
+
