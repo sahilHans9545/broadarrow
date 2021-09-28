@@ -438,6 +438,12 @@ form .submit button{
 
 }
 
+@media screen and (max-width:1100px) {
+    .contact .border-right{
+        padding-right: 5% !important;
+    }
+}
+
 @media screen and (max-width:576px) {
     form .three-columns div{
         width: 100%;
@@ -451,7 +457,6 @@ form .submit button{
         height: unset;
     }
 
-    
 }
 
 @media screen and (max-width:550px) {
