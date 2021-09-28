@@ -4,12 +4,22 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: luxia;
+    src: url(../luxia-cufonfonts/LuxiaRegular.otf);
+}
+
+@font-face {
+    font-family: HelveticaBold;
+    src: url(../Helvetica-Font/Helvetica-Bold.ttf);
+}
+
 html{
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "HelveticaNeue-Light", "HelveticaNeue-Bold", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
 }
 
@@ -56,7 +66,7 @@ header p img{
 }
 
 .main-logo{
-    width: 25px;
+    max-width: 300px;
 }
 
 .line{
@@ -80,14 +90,15 @@ header p img{
 .broad-text{
     margin-top: 9vh;
     margin-bottom: 15vh;
+    color: #848484;
+    font-family: luxia;
 }
 
 .ourStory{
     padding: 5% 0%;
     height: min-content;
     background-color: rgb(19, 19, 19);
-    /* color: var(--text-in-black); */
-    color: #d8dbe0;
+    color: #D3D3D3;
 }
 
 .ourStory .row{
@@ -121,21 +132,14 @@ hr{
     position: relative;
 }
 
-.ourStory::after{
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    background-color: rgba(128, 128, 128, 0.561);
-    top: 0px;
-    left: 30%;
-
-}
-
 .ourStory .first-big{
     font-size: 3.5rem;
     position: relative;
     bottom: 20px;
+}
+
+.ourStory .main-logo{
+    max-width: 80%;
 }
 
 .broad-arrow-Group{
@@ -160,8 +164,8 @@ hr{
 
 
 .car-img1{
-    max-height: 400px;
-    height: 400px;
+    max-height: 500px;
+    height: 500px;
     overflow: hidden;
     position: relative;
     background-image: url(../resources/car1img.png);
@@ -201,7 +205,7 @@ hr{
 }
 
 .latest-news .button{
-    border: 1px solid #61666a;
+    border: 0.8px solid #61666a;
     color: var(--text-in-black);
     display: flex;
     justify-content: space-between;
@@ -223,10 +227,18 @@ hr{
     position: relative;
 }
 
+.latest-news .press_release_icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 12px;
+    position: relative;
+    top: 4px;
+}
+
 .latest-news .btn-right-txt::after,.latest-news .btn-right-txt::before{
     content: '';
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 1px;
     background-color: #61666a;
     left: 0;
@@ -245,12 +257,18 @@ hr{
 }
 
 .car-img2{
-    height: 200px;
+    height: 300px;
     width: 100%;
-    background-image: url(../resources/car2img.png);
+    background-image: url(../resources/porsche_grid.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.contact .head{
+    font-weight: bold;
+    color:#646464 ;
+    font-family: HelveticaBold;
 }
 
 .contact p{
@@ -317,6 +335,10 @@ form .submit button{
 
 .footer p{
     margin-bottom: 0%;
+}
+
+.footer .main-logo{
+    width: 200px;
 }
 
 
@@ -409,7 +431,7 @@ form .submit button{
 /* Desktop Team setion */
 .team-section{
     background-color:#f7f7f7;
-    padding: 100px 0;
+    padding: 70px 0 150px 0;
 }
 
 
@@ -425,10 +447,15 @@ form .submit button{
     margin: 20px 0px;
 }
 
-
 .container-persons .person-names h2{
-    color: #666666;
+    font-family: HelveticaBold;
+    color: #646464;
 }
+
+.container-persons .person-names p{
+    color: #BEBEBE;
+}
+
 
 .container-images{
     width: 100%;
@@ -722,3 +749,12 @@ form .submit button{
     justify-content: center;
 }
 
+
+.m-person .name h2{
+    font-family: HelveticaBold;
+    color: #646464;
+}
+
+.m-person .name p{
+    color: #BEBEBE;
+}
