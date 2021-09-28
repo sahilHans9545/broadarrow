@@ -54,7 +54,7 @@ header img{
     position: relative;
 }
 
-.line .microscope-icon{
+.line .telescope-icon{
     position: absolute;
     top: 50%;
     left: 50%;transform: translate(-50%,-50%);
@@ -280,6 +280,11 @@ form .submit button{
     color: var(--text-in-black);
     align-items: center;
     padding: 15px;
+    flex-wrap: wrap;
+}
+
+.footer p{
+    margin-bottom: 0%;
 }
 
 
