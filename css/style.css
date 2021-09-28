@@ -41,14 +41,18 @@ header p{
     top: 2%;
     left: 0%;
     padding-left: 25px;
-
 }
+
 
 header img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     top: 0%;
+}
+
+header p img{
+    margin-right: 5px;
 }
 
 .main-logo{
@@ -113,6 +117,21 @@ hr{
     margin: 8px 0px;
 }
 
+.ourStory{
+    position: relative;
+}
+
+.ourStory::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.561);
+    top: 0px;
+    left: 30%;
+
+}
+
 .ourStory .first-big{
     font-size: 3.5rem;
     position: relative;
@@ -151,7 +170,6 @@ hr{
 }
 
 
-
 .car-img1 .broad-arrow-Group{
     position: absolute;
     top: 20%;
@@ -164,18 +182,18 @@ hr{
     content: '';
     position: absolute;
     height: 15px;
-    width: 280%;
+    width: 230%;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--primary-green);
 }
 
 .car-img1 .broad-arrow-Group::after{
-    left: -290%;
+    left: -240%;
 }
 
 .car-img1 .broad-arrow-Group::before{
-    right: -290%;
+    right: -240%;
 }
 
 .latest-news{
@@ -354,6 +372,18 @@ form .submit button{
 
 }
 
+@media screen and (max-width:576px) {
+    form .three-columns div{
+        width: 100%;
+    }
+
+    .contact form .submit{
+        text-align: center;
+    }
+
+    
+}
+
 @media screen and (max-width:550px) {
     header p {
         font-size: 1.3rem;
@@ -377,9 +407,9 @@ form .submit button{
 
 
 /* Desktop Team setion */
-
 .team-section{
     background-color:#f7f7f7;
+    padding: 100px 0;
 }
 
 
