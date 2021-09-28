@@ -5,8 +5,10 @@
 }
 
 @font-face {
-    font-family: luxia;
-    src: url(../luxia-cufonfonts/LuxiaRegular.otf);
+    font-family: 'Luxia  Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Luxia Regular'), url('../luxia-cufonfonts-webfont/LuxiaRegular.woff') format('woff');
 }
 
 @font-face {
@@ -91,7 +93,11 @@ header p img{
     margin-top: 9vh;
     margin-bottom: 15vh;
     color: #848484;
-    font-family: luxia;
+    font-family: 'Luxia  Regular'
+}
+
+.broad-text p{
+    font-size: 1.3rem;
 }
 
 .ourStory{
@@ -111,8 +117,8 @@ header p img{
 }
 
 .ourStory .left-img{
-    width: 100%;
-    height: 100%;
+    max-width: 550px;
+    height: 500px;
     max-height: 500px;
 }
 
@@ -147,7 +153,6 @@ hr{
     position: relative;
     display: inline-block;
     color: #fff;
-
 }
 
 .ourStory .broad-arrow-Group::after{
@@ -160,6 +165,16 @@ hr{
     transform: translateY(-50%);
     margin-left: 20px;
 
+}
+
+.ourStory::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(128, 128, 128, 0.692);
+    top: 0%;
+    left: 25%;
 }
 
 
@@ -211,6 +226,7 @@ hr{
     justify-content: space-between;
     align-items: center !important;
     flex-wrap: wrap;
+    max-width: 700px;
 }
 
 .latest-news .button p{
@@ -245,11 +261,11 @@ hr{
 }
 
 .latest-news .btn-right-txt::after{
-    top: -5px;
+    top: -9px;
 }
 
 .latest-news .btn-right-txt::before{
-    bottom: -5px;
+    bottom: -9px;
 }
 
 .latest-news .button i{
@@ -274,10 +290,14 @@ hr{
 .contact p{
     color: var(--text-in-whiteBg);
 }
+.contact a{
+    color: var(--text-in-whiteBg);
+    text-decoration: none;
+}
 
 .contact form input{
     width: 100%;
-    padding: 10px;
+    padding: 10px 30px;
 }
 form .three-columns{
     display: flex;
@@ -290,6 +310,7 @@ form .three-columns div{
 
 .contact form .submit{
     text-align: end;
+    margin-bottom: 60px;
 }
 
 form .submit button{
@@ -310,7 +331,7 @@ form .submit button{
 
 .contact .msg{
     position: relative;
-    font-size: 20px;
+    filter: contrast(0);
 }
 
 .contact .msg::after{
@@ -380,6 +401,20 @@ form .submit button{
         padding:  0 !important;
     }
 
+    .ourStory::after{
+        display: none;
+    }
+
+    .ourStory .left-img{
+        max-width: 100%;
+    }
+
+    .contact form .submit{
+        margin-bottom: 30px;
+    }
+
+    
+
 }
 
 
@@ -397,6 +432,10 @@ form .submit button{
         background-position: center;
     }
 
+    .contact form .submit{
+        margin-bottom: 20px;
+    }
+
 }
 
 @media screen and (max-width:576px) {
@@ -406,6 +445,10 @@ form .submit button{
 
     .contact form .submit{
         text-align: center;
+    }
+
+    .ourStory .left-img{
+        height: unset;
     }
 
     
@@ -455,6 +498,7 @@ form .submit button{
 .container-persons .person-names h2{
     font-family: HelveticaBold;
     color: #646464;
+    font-size: 1.9rem;
 }
 
 .container-persons .person-names p{
@@ -564,22 +608,18 @@ form .submit button{
     margin-top: 27px;
 }
 
-.right-part .icons i{
-    font-size:20px;;
-}
-
-.right-part .icons i:nth-child(2){
-    margin-left: 20px;
-}
 
 .right-part .content{
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    color: var(--text-in-whiteBg);
 }
 
 .right-part  h3{
     margin: 20px 40px;
+    font-family: HelveticaBold;
+    color: #646464;
     text-transform: uppercase;
 }
 
