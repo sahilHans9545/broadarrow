@@ -102,7 +102,7 @@ header p img{
 .ourStory{
     padding: 5% 0%;
     height: min-content;
-    background-color: rgb(19, 19, 19);
+    background-color: var(--primary-black);
     color: #D3D3D3;
 }
 
