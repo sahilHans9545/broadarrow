@@ -186,18 +186,18 @@ hr{
     content: '';
     position: absolute;
     height: 15px;
-    width: 230%;
+    width: 190%;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--primary-green);
 }
 
 .car-img1 .broad-arrow-Group::after{
-    left: -240%;
+    left: -200%;
 }
 
 .car-img1 .broad-arrow-Group::before{
-    right: -240%;
+    right: -200%;
 }
 
 .latest-news{
@@ -373,6 +373,11 @@ form .submit button{
 
     form .three-columns div:nth-last-child(1){
         margin-top: 1.5rem;
+    }
+
+    .team-section {
+        background-color: #f7f7f7;
+        padding:  0 !important;
     }
 
 }
