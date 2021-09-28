@@ -72,6 +72,10 @@ let m_persons_content=document.querySelectorAll(".m-person-content");
 m_persons.forEach((element,index)=>{
     element.addEventListener("click",()=>{
         m_persons_content[index].style.display="block";
+        let m_cross=document.querySelectorAll(".m-person-content .m-cross")
+        m_cross[index].addEventListener("click",()=>{
+            m_cross[index].parentElement.style.display="none";
+        })
     })
 })
 
