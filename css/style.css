@@ -8,10 +8,17 @@ html{
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
+
+
 :root{
-    --primary-green:#59af59b5;
+    --primary-green:#5f7a57;
     --primary-black:rgb(19, 19, 19);
-    --text-in-black:rgb(207, 207, 207);
+    --text-in-black:#d8dbe0;
+    --text-in-whiteBg:#9b9b94;
 }
 
 header{
@@ -26,6 +33,7 @@ header p{
     font-weight: 600;
     z-index: 1;
     text-transform: uppercase;
+    padding-top: 10px;
     padding-bottom: 5px;
     border-bottom: 1px solid grey;
     position: absolute;
@@ -74,7 +82,8 @@ header img{
     padding: 5% 0%;
     height: min-content;
     background-color: rgb(19, 19, 19);
-    color: var(--text-in-black);
+    /* color: var(--text-in-black); */
+    color: #d8dbe0;
 }
 
 .ourStory .row{
@@ -97,7 +106,7 @@ header img{
     letter-spacing: 5px;
     text-transform: uppercase;
     margin-bottom: 5px !important;
-    color: rgb(192, 189, 189);
+    color: #96988b;
 }
 
 hr{
@@ -121,8 +130,8 @@ hr{
 .ourStory .broad-arrow-Group::after{
     content: '';
     position: absolute;
-    width: 50%;
-    height: 2px;
+    width: 85%;
+    height: 1px;
     top: 50%;
     background-color: rgba(128, 128, 128, 0.705);
     transform: translateY(-50%);
@@ -139,7 +148,6 @@ hr{
     background-image: url(../resources/car1img.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 
@@ -147,7 +155,8 @@ hr{
 .car-img1 .broad-arrow-Group{
     position: absolute;
     top: 20%;
-    right: 10%;
+    right: 16%;
+    font-size: 1.2rem;
     z-index: 1;
 }
 
@@ -155,18 +164,18 @@ hr{
     content: '';
     position: absolute;
     height: 15px;
-    width: 150%;
+    width: 280%;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--primary-green);
 }
 
 .car-img1 .broad-arrow-Group::after{
-    left: -170%;
+    left: -290%;
 }
 
 .car-img1 .broad-arrow-Group::before{
-    right: -170%;
+    right: -290%;
 }
 
 .latest-news{
@@ -174,7 +183,7 @@ hr{
 }
 
 .latest-news .button{
-    border: 1px solid rgba(128, 128, 128, 0.623);
+    border: 1px solid #61666a;
     color: var(--text-in-black);
     display: flex;
     justify-content: space-between;
@@ -201,7 +210,7 @@ hr{
     position: absolute;
     width: 100%;
     height: 1px;
-    background-color: rgba(128, 128, 128, 0.623);
+    background-color: #61666a;
     left: 0;
 }
 
@@ -223,7 +232,11 @@ hr{
     background-image: url(../resources/car2img.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: center;
+}
+
+.contact p{
+    color: var(--text-in-whiteBg);
 }
 
 .contact form input{
@@ -261,13 +274,14 @@ form .submit button{
 
 .contact .msg{
     position: relative;
+    font-size: 20px;
 }
 
 .contact .msg::after{
     content: '';
     position: absolute;
-    width: 100px;
-    height: 1.5px;
+    width: 160px;
+    height: 1.2px;
     background: rgba(128, 128, 128, 0.493);
     bottom: 0%;
     margin-left: 20px;
@@ -340,6 +354,34 @@ form .submit button{
 
 }
 
+@media screen and (max-width:550px) {
+    header p {
+        font-size: 1.3rem;
+        font-weight: 600;
+        z-index: 1;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        border-bottom: 1px solid grey;
+        position: absolute;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        padding: 0px 50px 0px 50px;
+    }
+
+    .broad-text{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+}
+
+
+/* Desktop Team setion */
+
+.team-section{
+    background-color:#f7f7f7;
+}
+
 
 .container-persons{
     width: 1100px;
@@ -351,6 +393,11 @@ form .submit button{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 20px 0px;
+}
+
+
+.container-persons .person-names h2{
+    color: #666666;
 }
 
 .container-images{
@@ -389,7 +436,7 @@ form .submit button{
     top: 10%;
     width: 120%;
     height: 15px;
-    background-color: rgba(26, 160, 26, 0.753);
+    background-color: var(--primary-green);
     opacity: 0;
     z-index: 1;
     transition: all 0.3s;
@@ -450,8 +497,13 @@ form .submit button{
     padding: 3%;
 }
 
+
 .right-part .icons{
-    margin-top: 15px;
+    margin-top: 27px;
+}
+
+.right-part .icons i{
+    font-size:20px;;
 }
 
 .right-part .icons i:nth-child(2){
@@ -464,9 +516,9 @@ form .submit button{
     margin-bottom: 30px;
 }
 
-.right-part  h1{
+.right-part  h3{
     margin: 20px 40px;
-    
+    text-transform: uppercase;
 }
 
 .right-part .content p{
@@ -493,16 +545,20 @@ form .submit button{
 }
 .container-images .cross{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     padding: 2px 10px;
     border: 1px solid black;
     z-index: 100;
     cursor: pointer;
     display: none;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1100px) {
     .container-persons{
         width: 800px;
         position: relative;
@@ -510,8 +566,15 @@ form .submit button{
         border-top: 1.5px solid rgba(0,0,0,0.3);
     }
 
-    
+    .person-names h2{
+        font-size: 1.4rem;
+    }
 
+    .container-images .right-part{
+        overflow: auto;
+    }
+
+    
     .container-images{
         width: 100%;
         height: 350px;
@@ -560,7 +623,8 @@ form .submit button{
 
 
 .m-person-img{
-    max-height: 350px;
+    height: 350px;
+    width: 100%;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -568,6 +632,7 @@ form .submit button{
 
 .m-person-img img{
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -616,9 +681,10 @@ form .submit button{
 .m-person-content .m-cross{
     position:absolute ;
     right: 15px;
-    top: 15px;
+    top: -55px;
     height: 35px;
     width: 35px;
+    background-color: #fff;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
     display: flex;
