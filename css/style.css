@@ -28,7 +28,7 @@ body {
 
 :root{
     --primary-green:#5f7a57;
-    --primary-black:rgb(19, 19, 19);
+    --primary-black:#191E25;
     --text-in-black:#d8dbe0;
     --text-in-whiteBg:#9b9b94;
 }
@@ -93,11 +93,10 @@ header p img{
     margin-top: 9vh;
     margin-bottom: 15vh;
     color: #848484;
-    font-family: 'Luxia  Regular'
 }
 
 .broad-text p{
-    font-size: 1.3rem;
+    color: #848484;
 }
 
 .ourStory{
@@ -145,7 +144,7 @@ hr{
 }
 
 .ourStory .main-logo{
-    max-width: 80%;
+    max-width: 200px;
 }
 
 .broad-arrow-Group{
@@ -438,9 +437,9 @@ form .submit button{
 
 }
 
-@media screen and (max-width:1100px) {
+@media screen and (max-width:1300px) {
     .contact .border-right{
-        padding-right: 5% !important;
+        padding-right: 2% !important;
     }
 }
 
